@@ -38,7 +38,7 @@ class Boot {
     val entries = Menu(Loc("Home", List("index"), "Home")) ::
     Menu(Loc("Static", Link(List("static"), true, "/static/index"),
       "Static Content")) ::
-    User.sitemap
+    User.siteMap
 
     LiftRules.setSiteMap(SiteMap(entries:_*))
 
