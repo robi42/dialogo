@@ -1,0 +1,20 @@
+# use glob syntax.
+syntax: glob
+*.ser
+*.class
+*~
+*.bak
+*.off
+*.old
+.DS_Store
+
+# building
+target
+
+# settings
+production.default.props
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
