@@ -1,8 +1,7 @@
 package at.logic.dialogo.lib
 
-import org.specs.specification.Examples
-import org.specs.runner.{ConsoleRunner, JUnit3}
 import org.specs.Specification
+import org.specs.runner.{ConsoleRunner, JUnit3}
 
 class DomainModelTestSpecsAsTest extends JUnit3(DomainModelTestSpecs)
 object DomainModelTestSpecsRunner extends ConsoleRunner(DomainModelTestSpecs)
