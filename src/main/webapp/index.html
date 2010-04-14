@@ -1,9 +1,23 @@
 <lift:surround with="default" at="content">
   <h2>Welcome to your project!</h2>
 
-  <p>
-    <lift:helloWorld.howdy>
-      <span>Welcome to dialogo at <b:time/></span>
-    </lift:helloWorld.howdy>
-  </p>
+  <lift:helloWorld.howdy>
+    <p>Welcome to dialogo at <b:time/>.</p>
+
+    <h3>Here's an exemplary formula:</h3>
+
+    <p>
+      <strong>
+        <b:formulaHtml/>
+      </strong>
+    </p>
+
+    <h3>And here's corresponding domain model code:</h3>
+
+    <p>
+      <strong>
+        <b:formulaCode/>
+      </strong>
+    </p>
+  </lift:helloWorld.howdy>
 </lift:surround>

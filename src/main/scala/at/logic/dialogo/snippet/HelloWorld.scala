@@ -10,14 +10,17 @@ import Helpers._
 
 class HelloWorld {
   lazy val date: Box[Date] = DependencyFactory.inject[Date] // inject the date
+  lazy val formula = Implication(Or(Operand("a"), Negation(Operand("a"))),
+    And(Operand("b"), Operand("c")))
 
   def howdy(in: NodeSeq): NodeSeq =
-    bind("b", in, "time" -> date.map(d => Text(d.toString)))
+    bind("b", in, "time" -> date.map(d => Text(d.toString)),
+      "formulaHtml" -> formula.toHtml, "formulaCode" -> formula.toString)
 
   /*
    lazy val date: Date = DependencyFactory.time.vend // create the date via factory
 
-   def howdy(in: NodeSeq): NodeSeq = Helpers.bind("b", in, "time" -> date.toString)
+   def howdy(in: NodeSeq): NodeSeq = bind("b", in, "time" -> date.toString)
    */
 }
 
