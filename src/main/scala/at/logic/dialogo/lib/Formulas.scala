@@ -63,8 +63,8 @@ case class And(override val leftHandSide: AtomicExpression,
   override val atom = Operator("&#x2227;", "&")
 }
 
-case class SuperAnd(override val leftHandSide: AtomicExpression,
-                    override val rightHandSide: AtomicExpression)
+case class StrongAnd(override val leftHandSide: AtomicExpression,
+                     override val rightHandSide: AtomicExpression)
         extends Expression(leftHandSide, rightHandSide) {
   override val atom = Operator("&#x2299;", "&&")
 }
@@ -75,8 +75,8 @@ case class Or(override val leftHandSide: AtomicExpression,
   override val atom = Operator("&#x2228;", "|")
 }
 
-case class SuperOr(override val leftHandSide: AtomicExpression,
-                   override val rightHandSide: AtomicExpression)
+case class StrongOr(override val leftHandSide: AtomicExpression,
+                    override val rightHandSide: AtomicExpression)
         extends Expression(leftHandSide, rightHandSide) {
   override val atom = Operator("&#x2295;", "||")
 }
