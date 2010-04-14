@@ -15,7 +15,7 @@ class HelloWorld {
 
   def howdy(in: NodeSeq): NodeSeq =
     bind("b", in, "time" -> date.map(d => Text(d.toString)),
-      "formulaHtml" -> formula.toHtml, "formulaCode" -> formula.toString)
+      "formulaHtml" -> formula.toHtml, "formulaCode" -> Text(formula.toString))
 
   /*
    lazy val date: Date = DependencyFactory.time.vend // create the date via factory
