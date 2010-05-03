@@ -10,7 +10,7 @@ import Helpers._
 
 class HelloWorld {
   lazy val date: Box[Date] = DependencyFactory.inject[Date] // inject the date
-  lazy val formula = Implication(Or(Operand("a"), Negation(Operand("a"))),
+  lazy val formula = Implies(Or(Operand("a"), Not(Operand("a"))),
     And(Operand("b"), Operand("c")))
 
   def howdy(in: NodeSeq): NodeSeq =

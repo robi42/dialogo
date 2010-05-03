@@ -8,7 +8,7 @@ class DomainModelTestSpecsAsTest extends JUnit3(DomainModelTestSpecs)
 object DomainModelTestSpecsRunner extends ConsoleRunner(DomainModelTestSpecs)
 
 object DomainModelTestSpecs extends Specification {
-  val formula = Implication(And(Operand("a"), Operand("b")), Operand("c"))
+  val formula = Implies(And(Operand("a"), Operand("b")), Operand("c"))
   val expectedHtml =
     <span id="expression5">(<span id="expression3">(<span id="expression1">a</span>{Unparsed("&#x2227;")}<span id="expression2">b</span>)</span>{Unparsed("&#x2192;")}<span id="expression4">c</span>)</span>
 

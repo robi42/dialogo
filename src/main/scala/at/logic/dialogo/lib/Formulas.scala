@@ -44,14 +44,14 @@ case class Verum extends AtomicExpression {
   override val atom = Operator("T", true)
 }
 
-case class Negation(rightHandSide: AtomicExpression) extends AtomicExpression {
+case class Not(rightHandSide: AtomicExpression) extends AtomicExpression {
   override val atom = Operator("&#x00AC;", "!")
 
   override def toHtml =
     <span id={id}>{Unparsed(atom.name)}({rightHandSide.toHtml})</span>
 }
 
-case class Implication(override val leftHandSide: AtomicExpression,
+case class Implies(override val leftHandSide: AtomicExpression,
                        override val rightHandSide: AtomicExpression)
         extends Expression(leftHandSide, rightHandSide) {
   override val atom = Operator("&#x2192;", "->")
